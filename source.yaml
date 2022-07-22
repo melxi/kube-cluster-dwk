@@ -8,3 +8,12 @@ spec:
   url: https://github.com/melxi/devops_with_kubernetes_2022
   ref:
     branch: part4
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: nats
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://nats-io.github.io/k8s/helm/charts/
